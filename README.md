@@ -20,9 +20,9 @@ make
 cd recovery
 nano boot.conf
 
-'''ENABLE_UART=1'''
+> ENABLE_UART=1
 according to https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#configuration-properties, this would set (right to left) as NVMe(6),SDCard/eMMC(1),netboot
-'''BOOT_CONF=0xf216'''
+> BOOT_CONF=0xf216
 
 
 mv pieeprom.original.bin
