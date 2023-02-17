@@ -9,11 +9,11 @@ Requirements:
 
 For bootloader updates you need at least a physical pc or VM running linux or Mac.
 Windows and WSL DO NOT WORK
-1) install usbboot\
-> sudo apt install libusb-1.0-0-dev
-> git clone --depth=1 https://github.com/raspberrypi/usbboot
-> cd usbboot
->make
+1) install usbboot
+> sudo apt install libusb-1.0-0-dev\
+> git clone --depth=1 https://github.com/raspberrypi/usbboot\
+> cd usbboot\
+> make\
 
 
 2) prepare latest eprom and set boot order
@@ -21,6 +21,7 @@ cd recovery
 nano boot.conf
 
 > ENABLE_UART=1\
+
 according to https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#configuration-properties, this would set (right to left) as NVMe(6),SDCard/eMMC(1),netboot
 
 > BOOT_CONF=0xf216
