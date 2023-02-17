@@ -13,13 +13,13 @@ Windows and WSL DO NOT WORK
 > sudo apt install libusb-1.0-0-dev\
 > git clone --depth=1 https://github.com/raspberrypi/usbboot\
 > cd usbboot\
-> make\
-
+> make
 
 2) prepare latest eprom and set boot order
-cd recovery
-nano boot.conf
+> cd recovery
+> nano boot.conf
 
+boot.conf should contain the following
 > ENABLE_UART=1\
 
 according to https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#configuration-properties, this would set (right to left) as NVMe(6),SDCard/eMMC(1),netboot
