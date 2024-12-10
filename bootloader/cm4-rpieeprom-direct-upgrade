@@ -1,0 +1,16 @@
+user@CM4:~ $ rpi-eeprom-update
+rpi-eeprom-update is not enabled by default on CM4.
+The recommended method for flashing the EEPROM is rpiboot.
+See: https://github.com/raspberrypi/usbboot/blob/master/Readme.md
+Run with -h for more information.
+
+To enable flashrom programming of the EEPROM
+Add these the following entries to /etc/default/rpi-eeprom-update
+RPI_EEPROM_USE_FLASHROM=1
+CM4_ENABLE_RPI_EEPROM_UPDATE=1
+
+and these entries to config.txt and reboot
+[cm4]
+dtparam=spi=on
+dtoverlay=audremap
+dtoverlay=spi-gpio40-45
